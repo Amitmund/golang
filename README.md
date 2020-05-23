@@ -1,7 +1,7 @@
 # golang
 golang codes
 
-
+```
 For Mac
 `wget -O AmitMundWebServer https://github.com/Amitmund/golang/blob/master/amundSimpleHTTPServer/AmitMundWebServer_Mac?raw=true`
 
@@ -10,10 +10,11 @@ For Linux
 
 For Windows
 `wget -O AmitMundWebServer https://github.com/Amitmund/golang/blob/master/amundSimpleHTTPServer/AmitMundWebServer_Windows?raw=true`
+```
 
 
 # workspace
-
+```
 amund@blr-mptlw:[master][~/github/golang/goworkspace]:$ tree
 .
 ├── bin
@@ -22,12 +23,12 @@ amund@blr-mptlw:[master][~/github/golang/goworkspace]:$ tree
     └── github.com
         └── amund
 
-5 directories, 0 files
-
+```
 
 # Other example:
-https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-macos
 
+https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-macos
+```
 .
 ├── bin
 │   ├── buffalo                                      # command executable
@@ -48,12 +49,12 @@ https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-
                     └── droplet_test.go
 
 
-
+```
 
 
 # .gitignore - Example
 
-
+```
 # Ignore all
 *
 
@@ -85,3 +86,4 @@ relative/path/to/dir/filename.extension
 
 # Ignore a file without extension
 relative/path/to/dir/anotherfile
+```
