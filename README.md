@@ -13,7 +13,7 @@ For Windows
 ```
 
 
-# workspace
+### workspace
 ```
 amund@blr-mptlw:[master][~/github/golang/goworkspace]:$ tree
 .
@@ -25,7 +25,7 @@ amund@blr-mptlw:[master][~/github/golang/goworkspace]:$ tree
 
 ```
 
-# Other example:
+### Other example:
 
 https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-macos
 ```
@@ -52,7 +52,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-
 ```
 
 
-# .gitignore - Example
+### .gitignore - Example
 
 ```
 # Ignore all
