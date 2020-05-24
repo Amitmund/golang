@@ -87,3 +87,12 @@ relative/path/to/dir/filename.extension
 # Ignore a file without extension
 relative/path/to/dir/anotherfile
 ```
+
+### Few .gitignore - links
+
+```
+https://git-scm.com/docs/gitignore
+https://git-scm.com/docs/gitignore
+https://help.github.com/en/github/using-git/ignoring-files
+
+```
