@@ -92,7 +92,6 @@ relative/path/to/dir/anotherfile
 
 ```
 https://git-scm.com/docs/gitignore
-https://git-scm.com/docs/gitignore
 https://help.github.com/en/github/using-git/ignoring-files
 
 ```
