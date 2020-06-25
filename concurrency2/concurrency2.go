@@ -38,11 +38,15 @@ func underline() {
 
 // main function.
 func main() {
+
+	// creating a sync.Waitgroup.
 	var wg sync.WaitGroup
 
+	// putting a counter.
 	wg.Add(1)
 	go func() {
 		underline()
+		// complted the counter.
 		wg.Done()
 	}()
 
