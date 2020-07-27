@@ -22,7 +22,8 @@ func commands(w http.ResponseWriter, r *http.Request) {
 			fmt.Fprintf(w, "ParseForm() err: %v", err)
 			return
 		}
-		fmt.Fprintf(w, "Post from subject functions! r.PortForm = %v\n", r.PostForm)
+		// Commenting the following line, not to display the post details.
+		// fmt.Fprintf(w, "Post from subject functions! r.PortForm = %v\n", r.PostForm)
 		command := r.FormValue("command")
 		cmdOutput, _ := exec.Command("/bin/bash", "-c", command).Output()
 		stringOutput := string(cmdOutput[:])
@@ -43,16 +44,23 @@ func main() {
 	authenticator := auth.NewBasicAuthenticator("Basic Realm", htpasswd)
 
 	// http.HandleFunc("/commands", commands)
-	http.HandleFunc("/commands", auth.JustCheck(authenticator, commands))
-	http.HandleFunc("/commands/", auth.JustCheck(authenticator, commands))
+	http.HandleFunc("/", auth.JustCheck(authenticator, commands))
 
-	fmt.Printf("Starting server for testing HTTP POST...\n")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	// you this authenticator, only if needed. else you can just use the simple one.
+	// Example:
+	// http.HandleFunc("/", hello)
+	// http.HandleFunc("/commands", auth.JustCheck(authenticator, commands))
+	// http.HandleFunc("/commands/", auth.JustCheck(authenticator, commands))
+
+	fmt.Printf("Welcome to Amit Mund's  commandsOverUI...\n")
+	fmt.Printf("Starting server at port 80...\n")
+	if err := http.ListenAndServe(":80", nil); err != nil {
 		log.Fatal(err)
 	}
 }
 
 // htpasswd -c .htpasswd amitmund
+// To add a new user "htpasswd .htpasswd devops"
 // note: the .htpasswd file should be there on the same location, where the code is running.
 // 	auth "github.com/abbot/go-http-auth"
 // htpasswd := auth.HtpasswdFileProvider("./.htpasswd")
